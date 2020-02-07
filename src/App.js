@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import uuid from 'uuid'
 import './App.css';
+import MovieList from './Components/movieList';
+import Search from './Components/Search';
+import AddModal from './Components/addModal';
 
 function App() {
+  const movie = { 
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Search/>
+    
+      <MovieList/>
+      <AddModal  editMode={false} />
     </div>
   );
 }
